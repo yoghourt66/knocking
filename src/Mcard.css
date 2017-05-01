@@ -1,0 +1,517 @@
+html,body{
+	margin: 0;
+	width: 100%;
+	height: 100%;
+/*	background: #282828;*/
+	background: rgba(0,0,0,0.6);
+}
+
+*{
+	box-sizing:border-box;
+}
+
+.panel{
+	height: 100%;
+}
+
+#logo,input,a,.share{
+	position: fixed;
+	left: 0;
+	background: #282828;
+}
+
+#logo{
+	top: 0;
+	width: 20%;
+	height: 20%;
+/*	background: yellow;*/
+}
+
+#logo p{
+	color:gold;
+/*	color: rgb(210,210,210);*/
+	font-weight: 10000;
+	text-align: center;
+	text-shadow:10px 5px 20px yellow;
+}
+
+input,a{
+	width: 20%;
+	height: 15%;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+input{
+	opacity: 0;
+	z-index: 15;
+}
+
+a{
+	z-index: 5;
+	font-weight: 700;
+	color:#379d39;
+	/*color: rgb(210,210,210);*/
+	text-align: center;
+	text-shadow:1px 1px 1px rgba(200,200,200,0.2);
+}
+
+#control-1, #control-1 + a{
+	top:20%;
+}
+
+#control-2, #control-2 + a{
+	top: 35%;
+}
+
+#control-3, #control-3 + a{
+	top:50%;
+}
+
+#control-4, #control-4 + a{
+	top:65%;
+}
+
+.share{
+	top:80%;
+	height: 20%;
+}
+
+.share img{
+	width: 30px;
+	height: 30px;
+
+}
+
+input:checked + a,
+input:checked:hover + a{
+	/*color:white;*/
+	color:#dacfa1;
+
+}
+
+input:hover + a{
+	/*color:green;*/
+	color:#fff7e2;
+}
+
+.content {
+	position: fixed;
+	left: 20%;
+	top: 0;
+	width: 80%;
+	height: 100%;
+	margin: 0;
+	padding-top: 0;
+}
+
+.content{
+	-webkit-transition:all 0.6s ease-in-out;
+	-moz-transition:all 0.6s ease-in-out;
+	-o-transition:all 0.6s ease-in-out;
+	-ms-transition:all 0.6s ease-in-out;
+
+	-webkit-transform:translate3d(0,0,0);
+	-webkit-backface-visibility:hidden;
+}
+
+.panel{
+	/*background: #424345;*/
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+#control-1:checked ~ .content{
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	-o-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	transform: translateY(0%);
+}
+
+#control-2:checked ~ .content{
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+#control-3:checked ~ .content{
+	-webkit-transform: translateY(-200%);
+	-moz-transform: translateY(-200%);
+	-o-transform: translateY(-200%);
+	-ms-transform: translateY(-200%);
+	transform: translateY(-200%);
+}
+
+#control-4:checked ~ .content{
+	-webkit-transform: translateY(-300%);
+	-moz-transform: translateY(-300%);
+	-o-transform: translateY(-300%);
+	-ms-transform: translateY(-300%);
+	transform: translateY(-300%);
+}
+
+
+#backdrop{
+	width:740px;
+	height: 35%;
+	position: absolute;
+	top: 10%;
+	left:calc(50% - 370px);
+	border: 1px solid #ccc;
+
+}
+
+#backdrop div div{
+	/*color:white;*/
+	margin-top: -35px;
+	text-align: center;
+	line-height: 30px;
+	font-weight: 600;
+	font-size: 16px;
+	opacity: 1;
+}
+
+#magicCard{
+	background: url(./wreath.png) no-repeat center center;
+/*	background: transparent;*/
+	width:280px;
+	height: 280px;
+	position: absolute;
+	top: 5%;
+	left:calc(50% - 140px);
+	/*border: 1px solid #ccc;
+	border-radius: 50%;*/
+}
+
+#magicCard #word{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	/*background-image: radial-gradient(circle  at 50% 50%, #fff, rgba(225,225,225,0.9) 80%, rgba(225,225,225,0.8));*/
+	background: rgba(201,212,154,0.9);
+	position: absolute;
+	top:calc(50% - 75px);
+	left: calc(50% - 75px);
+	box-shadow: 0 0 6px 6px rgba(226,232,194,0.8);
+	
+}
+
+#word #English{
+	width: 140px;
+	height: 20px;
+	position: absolute;
+	top:45px;
+	left: 5px;
+	/*border:1px solid #eee;*/
+	/*background: #fff;*/
+	text-align: center;
+}
+
+#word #line{
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #eee;
+	position: absolute;
+	top:70px;
+	left: 72px;
+}
+
+#word #line:before,
+#word #line:after{
+	content: '';
+	width: 60px;
+	height: 5px;
+	border-top:2px solid #eee;
+	position: absolute;
+	top:4px;
+	left: -68px;
+}
+
+#word #line:after{
+	left: 15px;
+}
+
+#word #translate{
+	width: 120px;
+	height: 40px;
+	position: absolute;
+	top:85px;
+	left:15px;
+	/*border:1px solid #eee;*/
+	/*background: #fff;*/
+	text-align: center;
+	line-height: 20px;
+	/*-webkit-transform:rotateY(0deg);*/
+	/*transition:all 1s ease-in-out;*/
+}
+
+/*#word:hover{
+	transform-style: preserve - 3d;
+	transform-origin:50% 50%;
+	-webkit-transform: rotateY(360deg);
+	transition:all 2s ease-in-out;
+}*/
+
+#notebook{
+	background:url(./message.png) no-repeat center 0px;
+	width:420px;
+	height: 250px;
+	/*height: 40%;*/
+	position: absolute;
+	top: 5%;
+	left:calc(50% - 210px);
+	/*border: 1px solid #ccc;*/
+}
+
+#notebook:after{
+	content: '';
+	width: 412px;
+	height: 1px;
+	border-radius: 30%;
+	position: absolute;
+	top: 265px;
+	left:10px;
+	background-image: radial-gradient(ellipse 100% 80% at 50% 50%, #97896e 30%,#eee 80%);
+	z-index: -1;
+	box-shadow: 0px 0px 8px 4px #97896e;
+}
+
+.currentItem{
+	color:black;
+	background: yellow;
+	background-size: 100%;
+}
+
+.textInput_right{
+	color: green;
+	background: transparent;
+}
+
+.textInput_error{
+	color: red;
+}
+
+#artical{
+	width: 320px;
+	height: 150px;
+	position: absolute;
+	top:60px;
+	left: 45px;
+
+}
+
+#artical span{
+	text-align: center;
+	font-family: monospace;
+	font-weight: 800;
+	font-size: 18px;
+/*	color:#ccc;*/
+/*	color:black;*/
+	display: inline-block;
+	width: 10px;
+	height: 22px;
+}
+
+
+
+/*面板中键盘模块*/
+.keyboard{
+	position:absolute;
+	top:50%;
+/*	top:250px;*/
+	left: calc(50% - 370px);
+	width: 760px;
+	height: 270px;
+	/*background: #000;*/
+}
+
+.keyboard ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/*li、text图层、finger图层 大小、位置设置*/
+.keyboard ul li{
+	float:left;
+	width:40px;
+	height:40px;
+	border:1px solid #dccfa5;	
+	border-radius: 5px;
+	background:rgba(256,256,256,1);
+	margin-left: 10px;
+	margin-top: 10px;
+	/*box-shadow:2px 2px rgb(220,220,220); */
+}
+
+.keyboard ul li:nth-child(14),.keyboard ul li:nth-child(14) .text,.keyboard ul li:nth-child(14).activeKey .finger{	
+	width: 73px;
+}
+
+.keyboard ul li:nth-child(15),.keyboard ul li:nth-child(15) .text,.keyboard ul li:nth-child(15).activeKey .finger{	
+	width: 73px;
+}
+
+.keyboard ul li:nth-child(29),.keyboard ul li:nth-child(29) .text,.keyboard ul li:nth-child(29).activeKey .finger{	
+	width: 82px;
+}
+
+.keyboard ul li:nth-child(41),.keyboard ul li:nth-child(41) .text,.keyboard ul li:nth-child(41).activeKey .finger{
+	width: 82px;
+}
+
+.keyboard ul li:nth-child(42),.keyboard ul li:nth-child(42) .text,.keyboard ul li:nth-child(42).activeKey .finger{	
+	width: 107px;
+}
+
+.keyboard ul li:nth-child(53),.keyboard ul li:nth-child(53) .text,.keyboard ul li:nth-child(53).activeKey .finger{
+	width: 107px;
+}
+
+.keyboard ul li:nth-child(57),.keyboard ul li:nth-child(57) .text,.keyboard ul li:nth-child(57).activeKey .finger{	
+	width: 54px;
+}
+
+.keyboard ul li:nth-child(58),.keyboard ul li:nth-child(58) .text,.keyboard ul li:nth-child(58).activeKey .finger{	
+	width: 260px;
+}
+
+.keyboard ul .direction,.keyboard ul .direction .text,.keyboard ul .direction.activeKey .finger{	
+	height: 19px;
+}
+
+.keyboard ul .under{
+	margin-top: 30px;
+}
+
+.keyboard ul li:nth-child(63){
+	margin-left: -40px;	
+}
+
+
+
+/*text图层 文字样式设置、大小、相对位置设置*/
+.keyboard ul li .text{
+	color: #57823d;
+	font-family: Helvetica;
+	font-weight: 800;
+	font-size: 12px;
+	line-height: 20px;
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 3px;
+	text-align: center;
+}
+
+.keyboard ul li:nth-child(15) .text,.keyboard ul li:nth-child(29) .text,.keyboard ul li:nth-child(42) .text{
+	text-align: left;
+}
+
+.keyboard ul li:nth-child(14) .text,.keyboard ul li:nth-child(41) .text,.keyboard ul li:nth-child(53) .text{
+	text-align: right;
+}
+
+.keyboard ul .lastl .text{
+	line-height: 60px;
+}
+
+
+
+/*被激活按键改为activeKey类，finger图层在该类下显现，大小、位置、颜色设置*/
+.keyboard ul li.activeKey .finger{
+	width: 40px;
+	height: 40px;
+	margin-top:-40px;
+	border-radius: 3px;
+	border:1px solid #bbb;	
+	background: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 0 10px 10px rgba(255,255,255,0.8);
+	opacity: 0;
+}
+
+.keyboard ul .direction.activeKey .finger{
+	margin-top: -19px;
+}
+
+
+
+#window{
+	border:0px solid #ccc;
+/*	background: yellow;*/
+/*	background: transparent;*/
+	width:740px;
+	height: 55%;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	position: absolute;
+	top: 10%;
+	left:calc(50% - 370px);
+	overflow: hidden;
+}
+
+#screen{
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	/*overflow-x: hidden;*/
+}
+
+#bar{
+	width: 100%;
+	height: 8%;
+	/*background: rgb(210,210,210);*/
+	background: -webkit-linear-gradient(top, #eae6e3 20%, #dad6d6 50%, #cac5c7 80%);
+	position: absolute;
+	top:0;
+	left: 0; 
+}
+
+#bar:after{
+	content: '';
+	width: 2%;
+	height: 50%;
+	border-radius: 1px solid red;
+	border-radius: 50%;
+	background: red;
+	position: absolute;
+	top:25%;
+	right:10%;
+	box-shadow: 20px 0 0 0 orange, 40px 0 0 0 green;
+}
+
+#bar:before{
+	content: 'demo.js';
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	text-align: center;
+}
+
+#screen{
+
+}
+
+#container{
+	width: 240px;
+	height: 150px;
+	position: absolute;
+	top:70%;
+	left:calc(50% - 120px);
+	z-index: 1;
+}
+
+#main{
+	width:200px;
+	height: 150px;
+	position: relative;
+}
+

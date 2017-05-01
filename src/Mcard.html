@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="./Mcard.css">
+	<link rel="stylesheet" type="text/css" href="./man.css">
+	<script src='./jquery.js'></script>
+	
+</head>
+<body>
+	<!-- <div class='sidebar'> -->
+		<div id='logo'>
+			<!-- <p>knocking</p> -->
+			<img src='./logo.png'>
+		</div>
+
+		<input type='radio' name='radio-set' checked='checked' id='control-1'>
+		<a>指法练习</a>
+		<input type='radio' name='radio-set' id='control-2' >
+		<a>单词练习</a>
+		<input type='radio' name='radio-set' id='control-3'>
+		<a>段落练习</a>
+		<input type='radio' name='radio-set' id='control-4'>
+		<a>代码段练习</a>
+
+		<div class='share'>
+			<img name='twitter' src='./twitter.png'/>
+			<!-- <img name='facebook' src='./pic/facebook.jpg'/> -->
+			<img name='qq' src='./qq.png'/>
+			<img name='weixin' src='./weixin.png'/>
+			<img name='kongjian' src='./kongjian.png'>
+		</div>
+
+	<div class='content'>
+		<div class='panel' id='panel-1'>
+			<div id = 'backdrop'>
+				<!--	<img id="img1" src="./t01053ab4d4d6510abd.png" alt=""> -->
+			</div>
+			<div class='keyboard'></div>
+		</div>
+
+		<div class='panel' id='panel-2'>
+			<div id = 'magicCard'>
+				<div id='word'>
+					<div id='English'></div>
+					<div id='line'></div>
+					<div id='translate'></div>
+				</div>
+			</div>
+			<div class='keyboard'></div>
+		</div>
+
+		<div class='panel' id='panel-3'>
+			<div id='notebook'>
+				<div id='artical'></div>
+			</div>
+			<div class='keyboard'></div>
+		</div>
+
+		<div class='panel' id='panel-4'>
+			<div id='window'>
+				<div id='bar'></div>
+				<div id='screen'></div>
+			</div>
+			<div id='container'>
+				<div id='main'>
+					<div class='chair'></div>
+					<div class='board'>
+						<div class='button'></div><!-- 用渐变实现多个-->
+					</div>
+					<div class='man'>
+						<div class='head'>
+							<div class='glasses'><!-- 横梁通过伪类实现 -->
+								<div class='left_eyeGlass'></div>
+								<div class='left_glassLeg'></div>
+								<div class='right_eyeGlass'></div>
+								<div class='right_glassLeg'></div>
+							</div>
+							<div class='eyes'><!-- 眉毛通过伪类实现 -->
+								<div id='leftEye'>
+									<div class='left_blackEye'>
+										<div class='left_white'></div>
+									</div>
+								</div>
+								<div id='rightEye'>
+									<div class='right_blackEye'>
+										<div class='right_white'></div>
+									</div>
+								</div>
+							</div>
+							<div class='nose'></div>
+						</div>
+						<div class='ears'>
+								<div id='leftEar'></div>
+								<div id='rightEar'></div>
+							</div>
+						<div class='shoulder'></div>
+						<div class='arm'>
+							<div class='leftArm'></div>
+							<div class='leftHand'><!-- 指甲用伪类实现 -->
+								<div class='left_palm'></div>
+								<div class='left_one'></div>
+								<div class='left_two'></div>
+								<div class='left_three'></div>
+								<div class='left_four'></div>
+								<div class='left_five'></div>
+							</div>
+							
+							<div class='rightArm'></div>
+							<div class='rightHand'>
+								<div class='right_palm'></div>
+								<div class='right_one'></div>
+								<div class='right_two'></div>
+								<div class='right_three'></div>
+								<div class='right_four'></div>
+								<div class='right_five'></div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div id='mouse'>
+				</div>				
+			</div>
+		</div>
+
+	</div>
+
+	<script src='./Mcard.js'></script>
+</body>
+</html>
